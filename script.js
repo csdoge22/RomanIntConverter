@@ -5,6 +5,7 @@ function intToRoman(input){
     let roman = "";
 
     while(temp>0){
+        // we do the letters in descending order so that numerous I's are not displayed 
         if(temp-1000>=0){
             roman+="M";
             temp-=1000;
@@ -58,9 +59,12 @@ function intToRoman(input){
             temp-=1;
         }
     }
+
+    // this is the text that will be returned to the website
     return val+" in roman numerals is: "+roman;
 }
 
+// variables to access HTML elements
 let number = document.getElementById("inp");
 let roman = document.getElementById("roman");
 let convert = document.getElementById("btn");
@@ -71,14 +75,17 @@ convert.addEventListener("click", function(){
     roman.innerHTML = intToRoman(val);
 });
 
-/* case sensitive */
+
+/** this for loop performs a linear search to see if there are any invalid letters in the string
+this function is case sensitive so lowercase letters will not be accepted
+(the end point will be length-1 since we will check for X after I, V after I etc) */
 function romanToInt(input){
     // accumulator for printing the string
     let val = input+"";
     let intval = 0;
-    // performs a linear search to see if there are any invalid letters in the string 
-    // (the end point will be length-1 since we will check for X after I, V after I etc)
+    
 
+    // Defines a map rti (roman to integer) with roman keys and integer values
     const rti = new Map([
         ['M',1000],
         ['CM',900],
@@ -94,10 +101,12 @@ function romanToInt(input){
         ['IV',4],
         ['I',1]
     ]);
-    // Defines a map rti (roman to integer) with roman keys and integer values
+
+    // I used a while loop to prevent any extra calculations
     let i = 0;
+    // end condition is length-1 because I will be accessing two indices at a time
     while(i<val.length-1){
-        // end condition is length-1 because I will be accessing two indices at a time
+        
         let onestr = val.charAt(i);
         let twostr = val.substring(i,i+2);
         if(!rti.has(onestr)){
@@ -115,19 +124,20 @@ function romanToInt(input){
         }
         i++;
     }
+    // only if the current index is at the last character will additional calculations be applied
     if(i==val.length-1){
         intval+=rti.get(val.charAt(val.length-1));
     }
     return val+" as an integer is "+intval;
 }
 
+// HTML element access
 let rom = document.getElementById("inp1");
 let integer = document.getElementById("integer");
 let btn1 = document.getElementById("btn1");
-// HTML element access
 
+// when the convert button is clicked, the roman number will be converted to integer
 btn1.addEventListener("click",function(){
     let val = rom.value;
     integer.innerHTML = romanToInt(val);
 });
-// when the convert button is clicked, the roman number will be converted to integer

@@ -1,3 +1,4 @@
+/* stylesheet */
 body{
     background-color: palegoldenrod;
 }
@@ -24,4 +25,20 @@ p{
     text-align: center;
     padding: 5px;
     margin: 2px;
+}
+.notes{
+    color: black;
+    padding: 5px;
+    margin: 5px;
+}
+#foot{
+    border-radius: 10px;
+    border: 2px solid;
+    margin: 10px;
+}
+.headings{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.socials{
+    overflow: visible;
 }

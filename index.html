@@ -6,10 +6,15 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <!-- to make the site responsive -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- title -->
         <header>
-            <h1 id="titl" align="center">Integer / Roman Number Converter</h1>
+            <h1 id="titl" class="headings" align="center">Integer / Roman Number Converter</h1>
         </header>
 
+        <!-- components in the int to roman aspect -->
         <section id="itr">
             <div>
                 <label class="ptext">Enter a number to convert to roman:</label>
@@ -19,6 +24,7 @@
             <button id="btn">Convert</button>
         </section>
         
+        <!-- components in the roman to int aspect -->
         <section id="rti">
             <div>
                 <label class="ptext">Enter roman letters to convert to an integer (insert uppercase letters):</label>
@@ -27,10 +33,22 @@
             <p id="integer"></p>
             <button id="btn1">Convert</button>
         </section>
+
+        <h1 class="headings">Notes: </h1>
+        <p class="notes">Additional numbers will be casted to its equivalent version IV (Ex: IIII -> IV) </p>
+        <p class="notes">Negative numbers and 0 are not allowed when converting from integer to roman</p>
         <script src="script.js"></script>
         
+        <!-- Contacts / Social Media -->
         <footer id="foot">
-            <p>Socials:</p>
+            <p class="notes">Socials:</p>
+            <div class="socials">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/sunnyambashta/">Linkedin</a></li>
+                    <li><a href="https://www.instagram.com/sirbarks22/">Instagram</a></li>
+                    <li><a href="https://www.youtube.com/@SonitAmbashta/videos">YouTube</a></li>
+                </ul>
+			</div>
         </footer>
     </body>
 </html>
