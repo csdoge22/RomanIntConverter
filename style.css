@@ -1,0 +1,27 @@
+body{
+    background-color: palegoldenrod;
+}
+p{
+    color: white;
+}
+#titl{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#roman{
+    background-color: blue;
+    text-align: center;
+    padding: 5px;
+    margin: 2px;
+}
+.ptext{
+    text-align: center;
+}
+#inp{
+    float: 100px;
+}
+#integer{
+    background-color: blue;
+    text-align: center;
+    padding: 5px;
+    margin: 2px;
+}
